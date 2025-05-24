@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import ContactExperience from '../components/Models/Contact/ContactExperience';
-
+import emailjs from '@emailjs/browser';
 const Contact = () => {
     const formRef = useRef(null);
     const [loading, setLoading] = useState(false);
@@ -10,17 +10,38 @@ const Contact = () => {
       message: "",
     });
 
-    const handleChange = (e) => {
+    const handleChange =  (e) => {
         const { name, value } = e.target;
         setForm({ ...form, [name]: value });
       };
 
       const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true); // Show loading state
-    
+        setLoading(true); 
+       try {
+        await emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            formRef.current,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+        
+       } catch (error) {
+          console.error("Error sending email:", error);
+          alert("Failed to send message. Please try again later.");
+        }
+        finally{
+            setLoading(false); 
+        }
+        
+       }
          
-      };
+    
   return (
     <section id="contact" className="flex-center section-padding">
     <div className="w-full h-full md:px-10 px-5">
