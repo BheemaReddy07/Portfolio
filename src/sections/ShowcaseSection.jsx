@@ -26,8 +26,8 @@ const ShowcaseSection = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 1,
-          delay: 0.2 * (index + 1),
+          duration: 2,
+          delay: 0.3 * (index + 1),
           scrollTrigger: {
             trigger: project,
             start: "top bottom-=100",
@@ -38,26 +38,38 @@ const ShowcaseSection = () => {
 
     gsap.fromTo(
       sectionRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
+      { opacity: 0 ,y: 50},
+      { opacity: 1,y:0, duration: 2 }
     );
   }, []);
 
   return (
-    <section ref={sectionRef} id="work" className="app-showcase">
+    <section ref={sectionRef} id="work" className="w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center">
+
       <div className="w-full">
-        <div className="showcaselayout">
+        <div>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-5 text-center">
+            My Work Showcase
+          </h1>
+          <p className="text-base md:text-lg lg:text-xl text-white-50 mb-10">
+            Explore my projects that blend creativity and technology to solve
+            real-world problems. Each project reflects my passion for innovation
+            and my commitment to delivering user-friendly solutions.
+          </p>
+        </div>
+         
+        <div className="flex xl:flex-row flex-col gap-10 justify-between">
           {/* LEFT */}
-          <div className="first-project-wrapper" ref={project1Ref}>
-            <div className="image-wrapper">
-              <img src="/images/On-Go Learn2.png" alt="project1" />
+          <div className="h-full flex flex-col justify-between xl:w-[60%]" ref={project1Ref}>
+            <div className="xl:h-[75vh] md:h-[50vh] h-96 relative">
+              <img src="/images/On-Go Learn2.png" alt="project1" className="w-full h-full object-cover rounded-xl absolute inset-0" />
             </div>
             <div className="text-content">
-              <h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                 Learn anytime, anywhere with On-Go Learn – your personalized
                 online learning platform
               </h2>
-              <p className="text-base text-white-50 md:text-lg lg:text-xl font-semibold">
+              <p className="text-base text-white-50 md:text-lg lg:text-lg font-medium">
                 On-Go Learn empowers students and professionals with easy access
                 to high-quality courses across various domains. Track your
                 progress, engage with interactive content, and enhance your

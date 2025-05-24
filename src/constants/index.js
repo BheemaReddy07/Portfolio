@@ -29,10 +29,10 @@ const navLinks = [
   ];
   
   const counterItems = [
-    { value: 15, suffix: "+", label: "Years of Experience" },
-    { value: 200, suffix: "+", label: "Satisfied Clients" },
-    { value: 108, suffix: "+", label: "Completed Projects" },
-    { value: 90, suffix: "%", label: "Client Retention Rate" },
+    { value: 5, suffix: "+", label: "Years of Coding Experience" },
+    { value: 4, suffix: "+", label: "Full-Stack Projects Built" },
+    { value: 50, suffix: "+", label: "LeetCode Problems Solved" },
+    { value: 10, suffix: "+", label: "Technologies Known" },
   ];
   
   const logoIconsList = [
@@ -73,21 +73,22 @@ const navLinks = [
   
   const abilities = [
     {
-      imgPath: "/images/seo.png",
-      title: "Quality Focus",
-      desc: "Delivering high-quality results while maintaining attention to every detail.",
+      imgPath: "/images/code.png",
+      title: "Full-Stack Expertise",
+      desc: "Capable of building complete web applications from scratch using the MERN stack and modern tools.",
     },
     {
-      imgPath: "/images/chat.png",
-      title: "Reliable Communication",
-      desc: "Keeping you updated at every step to ensure transparency and clarity.",
+      imgPath: "/images/learning.png",
+      title: "Continuous Learning",
+      desc: "Always upgrading my skills by exploring new technologies like Redux Toolkit, Stripe, and Three.js.",
     },
     {
-      imgPath: "/images/time.png",
-      title: "On-Time Delivery",
-      desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+      imgPath: "/images/project.png",
+      title: "Project-Oriented Mindset",
+      desc: "Focused on solving real-world problems through scalable and user-friendly applications.",
     },
   ];
+  
   
   const techStackImgs = [
     {
