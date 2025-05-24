@@ -8,8 +8,8 @@ const AnimatedCounter = () => {
     triggerOnce: true,
   });
   return (
-    <div id="counter" ref={ref} className="padding-x-lg xl:mt-0 mt-32 mb-5 ">
-      <div className="mx-auto grid-4-cols">
+    <div id="counter" ref={ref} className="px-5 md:px-20 xl:mt-0 mt-32 mb-5 ">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7">
         {counterItems.map((item) => (
           <div className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center">
             <div
