@@ -4,6 +4,7 @@ import ShowcaseSection from './sections/ShowcaseSection'
 import Navbar from './components/Navbar'
 import './App.css'
 import FeatureSection from './sections/FeatureSection'
+import TechStack from './sections/TechStack'
 
  const App = () => {
    return (
@@ -12,6 +13,7 @@ import FeatureSection from './sections/FeatureSection'
      <Hero />
      <ShowcaseSection />
      <FeatureSection />
+     <TechStack />
       
      </>
    )

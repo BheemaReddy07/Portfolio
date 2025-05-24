@@ -15,7 +15,7 @@ const GlowWrapper = ({ children, className = "" }) => {
     angle = (angle * 180) / Math.PI;
     angle = (angle + 360) % 360;
 
-    card.style.setProperty("--start", angle);
+    card.style.setProperty("--start", angle+60);
   };
 
   return (
