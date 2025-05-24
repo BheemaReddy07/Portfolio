@@ -6,6 +6,7 @@ import './App.css'
 import FeatureSection from './sections/FeatureSection'
 import TechStack from './sections/TechStack' 
 import Contact from './sections/Contact'
+import Footer from './sections/Footer'
 
  const App = () => {
    return (
@@ -16,6 +17,7 @@ import Contact from './sections/Contact'
      <FeatureSection />
      <TechStack />
       <Contact />
+      <Footer />
      </>
    )
  }
