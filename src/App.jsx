@@ -9,6 +9,7 @@ import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import AboutMe from './components/AboutMe'
 import TechnicalSkills from './components/TechnicalSkills'
+import AnimatedCounter from './components/AnimatedCounter'
 
  const App = () => {
    return (
@@ -16,6 +17,7 @@ import TechnicalSkills from './components/TechnicalSkills'
      <Navbar />
      <Hero />
      <AboutMe />
+     <AnimatedCounter />
      <ShowcaseSection />
      <FeatureSection />
      <TechnicalSkills />

@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaEnvelope, FaPhoneAlt, FaDownload } from 'react-icons/fa';
-
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+ 
 const AboutMe = () => {
+  const AboutmeRef = useRef(null);
+  useGSAP(() => {
+    gsap.fromTo(AboutmeRef.current,
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: AboutmeRef.current,
+          start: "top center",
+        },
+      }
+    );
+  }, []);
   return (
-    <section id="about" className="py-20 px-5 md:px-20 text-white bg-black">
+    <section id="about" className="py-20 px-5 md:px-20 text-white bg-black mb-8" ref={AboutmeRef}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left: Profile Image */}
         <img
           src="/images/BSR.png"
           alt="Tatiparthi Bheema Subramanyeswar Reddy"
-          className="rounded-tl-3xl rounded-br-3xl shadow-2xl w-full md:w-[420px] mx-auto"
+          className="hidden lg:block rounded-tl-3xl rounded-br-3xl shadow-2xl w-full md:w-[420px] mx-auto"
         />
 
         {/* Right: About Content */}

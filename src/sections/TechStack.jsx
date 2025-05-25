@@ -12,7 +12,7 @@ useGSAP(()=>{
 
 
   return (
-    <div id="skills" className="flex-center section-padding">
+    <div id="techstack" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <h2 className="text-center font-bold text-5xl">
           My preferred Tech Stack

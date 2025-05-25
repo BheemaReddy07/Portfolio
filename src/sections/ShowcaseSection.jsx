@@ -44,14 +44,14 @@ const ShowcaseSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="work" className="w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center">
+    <section ref={sectionRef} id="work" className="w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center mb-10">
 
       <div className="w-full">
         <div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-5 text-center">
             My Work Showcase
           </h1>
-          <p className="text-base md:text-lg lg:text-xl text-white-50 mb-10">
+          <p className="hidden lg:block text-base md:text-lg lg:text-xl text-white-50 mb-10">
             Explore my projects that blend creativity and technology to solve
             real-world problems. Each project reflects my passion for innovation
             and my commitment to delivering user-friendly solutions.
@@ -62,14 +62,17 @@ const ShowcaseSection = () => {
           {/* LEFT */}
           <div className="h-full flex flex-col justify-between xl:w-[60%]" ref={project1Ref}>
             <div className="xl:h-[75vh] md:h-[50vh] h-96 relative">
+              <a href="https://ongolearn-seven.vercel.app/" target="_blank" rel="noopener noreferrer">
+  
               <img src="/images/On-Go Learn2.png" alt="project1" className="w-full h-full object-cover rounded-xl absolute inset-0" />
+              </a>
             </div>
             <div className="text-content">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mt-8">
                 Learn anytime, anywhere with On-Go Learn – your personalized
                 online learning platform
               </h2>
-              <p className="text-base text-white-50 md:text-lg lg:text-lg font-medium">
+              <p className=" hidden lg:block mt-5 text-base text-white-50 md:text-lg lg:text-lg font-medium">
                 On-Go Learn empowers students and professionals with easy access
                 to high-quality courses across various domains. Track your
                 progress, engage with interactive content, and enhance your
@@ -82,11 +85,14 @@ const ShowcaseSection = () => {
           <div className="flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%] overflow-hidden">
             <div className="project " ref={project2Ref}>
               <div className="xl:h-[37vh]  md:h-52 lg:h-72 h-64 relative rounded-xl  ">
+                <a href="https://dinenow.vercel.app/" target="_blank" rel="noopener noreferrer">
+  
                 <img
                   src="/images/DineNow.png"
                   alt="project2"
                   className="w-full h-full  object-contain rounded-3xl"
                 />
+                </a>
               </div>
               <div className="mt-5">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
@@ -100,11 +106,14 @@ const ShowcaseSection = () => {
             <div className="flex flex-col lg:flex-row gap-10">
               <div className="project" ref={project3Ref}>
                 <div className="xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl   ">
+                  <a href="https://prescriptofrontend-puce.vercel.app/" target="_blank" rel="noopener noreferrer">
+  
                   <img
                     src="/images/Prescripto.png"
                     alt="project2"
                     className="w-full h-full object-cover rounded-xl"
                   />
+                  </a>
                 </div>
                 <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mt-5">
                   Prescripto: <span className="text-base md:text-lg lg:text-xl text-white-50 font-semibold">  Your Smart Solution for Hassle-Free Doctor
@@ -114,11 +123,14 @@ const ShowcaseSection = () => {
 
               <div className="project" ref={project4Ref}>
                 <div className="xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl   ">
+                  <a href="https://imagify-teal.vercel.app/" target="_blank" rel="noopener noreferrer">
+  
                   <img
                     src="/images/Imagify.png"
                     alt="project2"
                     className="w-full h-full object-cover rounded-xl"
                   />
+                  </a>
                 </div>
                 <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mt-5">
                   Imagify: <span className="text-base md:text-lg lg:text-xl text-white-50 font-semibold">Your Ultimate Text to Image Generation Tool</span>
