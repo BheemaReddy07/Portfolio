@@ -168,12 +168,12 @@ const navLinks = [
     {
       name: "linkedin",
       imgPath: "/images/linkedin1.png",
-      url:"",
+      url:"https://www.linkedin.com/in/bheema-subramanyeswar-reddy-tatiparthi-541104344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
       name: "guthub",
       imgPath:"/images/github3.png",
-      url:"",
+      url:"https://github.com/bheemareddy07/",
     },
   ];
   

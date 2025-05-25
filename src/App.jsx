@@ -7,14 +7,18 @@ import FeatureSection from './sections/FeatureSection'
 import TechStack from './sections/TechStack' 
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
+import AboutMe from './components/AboutMe'
+import TechnicalSkills from './components/TechnicalSkills'
 
  const App = () => {
    return (
      <>
      <Navbar />
      <Hero />
+     <AboutMe />
      <ShowcaseSection />
      <FeatureSection />
+     <TechnicalSkills />
      <TechStack />
       <Contact />
       <Footer />
