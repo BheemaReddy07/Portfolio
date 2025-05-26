@@ -77,7 +77,7 @@ const Hero = () => {
           <img
             src="/images/BSR.png"
             alt="hero"
-            className="md:w-[32rem] w-[24rem] md:h-[32rem] h-[24rem] rounded-tl-3xl rounded-br-3xl shadow-2xl border-4 border-white/20 backdrop-blur-sm hover:scale-105 transition-transform duration-500 ease-in-out"
+            className="md:w-[32rem] w-[24rem] md:h-[32rem] h-[24rem] rounded-tl-3xl rounded-br-3xl shadow-2xl border-4 border-white/20 backdrop-blur-sm hover:scale-105 transition-transform duration-500 ease-in-out mt-6 ld:mt-0"
           />
         </div>
       </div>
