@@ -11,7 +11,7 @@ const AboutMe = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 2,
         ease: "power2.out",
         scrollTrigger: {
           trigger: AboutmeRef.current,
@@ -23,11 +23,11 @@ const AboutMe = () => {
   return (
     <section id="about" className="py-20 px-5 md:px-20 text-white bg-black mb-8" ref={AboutmeRef}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Left: Profile Image */}
+        {/* Left: Profile Image  rounded-tl-3xl rounded-br-3xl */}
         <img
-          src="/images/BSR.png"
+          src="/images/BSR2.jpg"
           alt="Tatiparthi Bheema Subramanyeswar Reddy"
-          className="hidden lg:block rounded-tl-3xl rounded-br-3xl shadow-2xl w-full md:w-[420px] mx-auto"
+          className="hidden lg:block rounded-full shadow-2xl w-full md:w-[420px] mx-auto hover:transform hover:scale-105 transition-transform duration-300 ease-in-out  "
         />
 
         {/* Right: About Content */}

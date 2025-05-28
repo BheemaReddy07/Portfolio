@@ -7,11 +7,17 @@ import { gsap } from "gsap";
  
 import GlowWrapper from "./GlowWrapper";
 const AnimatedCounter = () => {
-   
+   const sectionRef = useRef(null);
   const { ref, inView } = useInView({
     threshold: 0.3,
     triggerOnce: true,
   });
+
+  const setRefs = (node) => {
+    sectionRef.current = node;
+    inView(node);
+  };
+
 
   useGSAP(() => {
       gsap.fromTo(ref.current,
@@ -22,7 +28,7 @@ const AnimatedCounter = () => {
           duration: 1.5,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: ref.current,
+            trigger: sectionRef.current,
             start: "top center",
           },
         }

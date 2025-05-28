@@ -1,4 +1,4 @@
- import React from 'react'
+ import React, { useState } from 'react'
 import Hero from './sections/Hero'
 import ShowcaseSection from './sections/ShowcaseSection'
 import Navbar from './components/Navbar'
@@ -10,9 +10,15 @@ import Footer from './sections/Footer'
 import AboutMe from './components/AboutMe'
 import TechnicalSkills from './components/TechnicalSkills'
 import AnimatedCounter from './components/AnimatedCounter'
+import WelcomeScreen from './components/WelcomeScreen'
 
  const App = () => {
-   return (
+
+  const [showWelcome, setShowWelcome] = useState(true);
+
+   return showWelcome ? (
+    <WelcomeScreen onLoadingComplete={() => setShowWelcome(false)} />
+    ) : (
      <>
      <Navbar />
      <Hero />

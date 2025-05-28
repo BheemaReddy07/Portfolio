@@ -5,7 +5,8 @@ import Button from "../components/Button";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
  
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -75,7 +76,7 @@ const Hero = () => {
 
         <div className="flex  justify-center flex-1 z-20">
           <img
-            src="/images/BSR.png"
+            src="/images/BSR1.jpg"
             alt="hero"
             className="md:w-[32rem] w-[24rem] md:h-[32rem] h-[24rem] rounded-tl-3xl rounded-br-3xl shadow-2xl border-4 border-white/20 backdrop-blur-sm hover:scale-105 transition-transform duration-500 ease-in-out mt-6 ld:mt-0"
           />

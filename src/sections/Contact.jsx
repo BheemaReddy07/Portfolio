@@ -1,8 +1,16 @@
 import React, { useRef, useState } from 'react'
 import ContactExperience from '../components/Models/Contact/ContactExperience';
 import emailjs from '@emailjs/browser';
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap"
+
 const Contact = () => {
     const formRef = useRef(null);
+
+    useGSAP(()=>{
+      gsap.fromTo(formRef.current,{y:50,opacity:0},{y:0,opacity:1,duration:2.5,stagger:0.2,ease:"power2.inOut",scrollTrigger:{trigger:"#contact",start:"top 5%",}})   
+     })
+
     const [loading, setLoading] = useState(false);
     const [form, setForm] = useState({
       name: "",
@@ -43,7 +51,7 @@ const Contact = () => {
          
     
   return (
-    <section id="contact" className="flex-center section-padding">
+    <section id="contact" className="flex-center section-padding" ref={formRef}>
     <div className="w-full h-full md:px-10 px-5">
         <h2 className="text-center font-bold text-5xl">Get in Touch</h2>
       <div className="grid-12-cols mt-16">
