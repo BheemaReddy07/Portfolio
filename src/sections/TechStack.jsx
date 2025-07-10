@@ -5,9 +5,9 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 const TechStack = () => {
 
-useGSAP(()=>{
- gsap.fromTo('.tech-card',{y:50,opacity:0},{y:0,opacity:1,duration:2.5,stagger:0.2,ease:"power2.inOut",scrollTrigger:{trigger:"#techstack",start:"top 5%",}})   
-})
+  useGSAP(() => {
+    gsap.fromTo('.tech-card', { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 2.5, stagger: 0.2, ease: "power2.inOut", scrollTrigger: { trigger: "#techstack", start: "top 5%", } })
+  })
 
 
 
@@ -29,7 +29,7 @@ useGSAP(()=>{
                   <TechIcon model={icon} />
                 </div>
                 <div className="padding-x w-full">
-                 <p>{icon.name}</p>
+                  <p>{icon.name}</p>
                 </div>
               </div>
             </div>

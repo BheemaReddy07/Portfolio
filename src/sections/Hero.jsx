@@ -1,35 +1,26 @@
-import React, { useRef } from "react";
+import React, { useEffect }   from "react";
 
 import { words } from "../constants";
 import Button from "../components/Button";
-import { useGSAP } from "@gsap/react";
+
 import { gsap } from "gsap";
- 
+import AOS from "aos";
+import 'aos/dist/aos.css';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-  const heroRef = useRef(null);
-  useGSAP(() => {
-    gsap.fromTo(heroRef.current,
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.5,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: heroRef.current,
-          start: "top center",
-        },
-      }
-    );
-  }, []);
-  
-  
+  useEffect(()=>{
+    AOS.init({
+      duration:2000,
+      once:false,
+    })
+  },[])
+
+
   return (
-    <section id="hero" className="relative overflow-hidden mb-5cd" ref={heroRef}>
-      <div className="absolute  top-0 left-0 z-10 ">
+    <section data-aos="zoom-in" id="hero" className="relative overflow-hidden mb-5cd" >
+      <div  className="absolute  top-0 left-0 z-10 ">
         <img src="/images/bg.png" alt="background" />
       </div>
 
@@ -82,7 +73,7 @@ const Hero = () => {
           />
         </div>
       </div>
-     
+
     </section>
   );
 };

@@ -1,37 +1,30 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { FaEnvelope, FaPhoneAlt, FaDownload } from 'react-icons/fa';
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
- 
+import { useEffect } from "react";
+import 'aos/dist/aos.css';
+import AOS from "aos";
+
+
 const AboutMe = () => {
-  const AboutmeRef = useRef(null);
-  useGSAP(() => {
-    gsap.fromTo(AboutmeRef.current,
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: AboutmeRef.current,
-          start: "top center",
-        },
-      }
-    );
-  }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: false,
+    })
+  }, [])
+
   return (
-    <section id="about" className="py-20 px-5 md:px-20 text-white bg-black mb-8" ref={AboutmeRef}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Left: Profile Image  rounded-tl-3xl rounded-br-3xl */}
-        <img
+    <section id="about" className="py-20 px-5 md:px-20 text-white bg-black mb-8">
+      <div  className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+     
+        <img data-aos="fade-right"
           src="/images/BSR2.jpg"
           alt="Tatiparthi Bheema Subramanyeswar Reddy"
           className="hidden lg:block rounded-full shadow-2xl w-full md:w-[420px] mx-auto hover:transform hover:scale-105 transition-transform duration-300 ease-in-out  "
         />
 
-        {/* Right: About Content */}
-        <div>
+        
+        <div  data-aos="fade-left">
           <h2 className="text-4xl font-bold mb-4 text-white">About Me</h2>
           <p className="text-white-50 text-lg leading-8 mb-6">
             Hi, I'm <span className="text-white font-semibold">Tatiparthi Bheema Subramanyeswar Reddy</span> — a dedicated Full Stack Web Developer and B.Tech CSE student with a passion for building scalable, responsive web apps using the MERN stack.

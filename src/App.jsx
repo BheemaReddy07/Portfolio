@@ -11,6 +11,7 @@ import AboutMe from './components/AboutMe'
 import TechnicalSkills from './components/TechnicalSkills'
 import AnimatedCounter from './components/AnimatedCounter'
 import WelcomeScreen from './components/WelcomeScreen'
+import Certifications from './sections/Certifications'
 
  const App = () => {
 
@@ -25,6 +26,7 @@ import WelcomeScreen from './components/WelcomeScreen'
      <AboutMe />
      <AnimatedCounter />
      <ShowcaseSection />
+     <Certifications />
      <FeatureSection />
      <TechnicalSkills />
      <TechStack />

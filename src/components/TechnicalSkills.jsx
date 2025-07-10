@@ -10,6 +10,8 @@ const skills = {
   Frontend: [
     'React.js',
     'Tailwind CSS',
+    'Next.js',
+    'React Native',
     'HTML5',
     'CSS3',
     'JavaScript (ES6+)',
@@ -24,6 +26,7 @@ const skills = {
   Databases: [
     'MongoDB',
     'MySQL',
+    'Appwrite'
   ],
   Tools: [
     'Git & GitHub',
@@ -37,6 +40,7 @@ const skills = {
     'Razorpay',
     'Google Maps API',
     'ClipDrop API',
+    'OAuth'
   ],
   Languages: [
     'JavaScript',
