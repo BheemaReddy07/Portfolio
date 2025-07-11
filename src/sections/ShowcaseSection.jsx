@@ -20,7 +20,7 @@ const ShowcaseSection = () => {
       description:
         "A food delivery app where users can browse food items, add to cart, place orders, and view order history. Includes admin features for managing products and orders.",
       photo: '/images/DineNow.png',
-      techStack: 'React.js,Express.js,MongoDb,node.js,JWT,nodeMailer, Stripe',
+      techStack: 'React.js, Express.js, MongoDb, node.js, JWT, nodeMailer, Stripe',
       liveLink: 'https://dinenow.vercel.app/',
       gitLink: 'https://github.com/BheemaReddy07/Food_delivery'
     },
@@ -29,7 +29,7 @@ const ShowcaseSection = () => {
       description:
         "A doctor appointment booking platform that allows users to register/login, search for doctors, view availability, and book appointments. Admin panel included for managing users and doctors.And also Doctor Login",
       photo: '/images/Prescripto.png',
-      techStack: 'MERN Stack, TailwindCSS, JWT, NodeMailer,Stripe',
+      techStack: 'MERN Stack, TailwindCSS, JWT, NodeMailer, Stripe',
       liveLink: 'https://prescriptofrontend-puce.vercel.app/',
       gitLink: 'https://github.com/BheemaReddy07/Doctor_Appointment'
     },
@@ -56,7 +56,7 @@ const ShowcaseSection = () => {
       description:
         "A blogging platform where users can sign up, write, edit, and delete articles. OAuth, Access Based Control, Supports Markdown formatting and categorization.User can Share Blog link,it has Og image Feature",
       photo: '/images/writely.png',
-      techStack: 'Next.js, TailwindCSS, Prisma,OAuth',
+      techStack: 'Next.js, TailwindCSS, Prisma, OAuth',
       liveLink: 'https://writely-blush.vercel.app/',
       gitLink: 'https://github.com/BheemaReddy07/Writely'
     },
