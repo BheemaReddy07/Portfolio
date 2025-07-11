@@ -29,7 +29,7 @@ const AboutMe = () => {
           <p className="text-white-50 text-lg leading-8 mb-6">
             Hi, I'm <span className="text-white font-semibold">Tatiparthi Bheema Subramanyeswar Reddy</span> — a dedicated Full Stack Web Developer and B.Tech CSE student with a passion for building scalable, responsive web apps using the MERN stack.
             <br /><br />
-            I specialize in frontend and backend development, UI animations, authentication flows, and integrations like Stripe and ClipDrop API. My work spans real-world projects including <strong>DineNow</strong>, <strong>Prescripto</strong>, and <strong>LMS systems</strong>.
+            I specialize in frontend and backend development, UI animations, authentication flows. My work spans real-world projects including <strong>DineNow</strong>, <strong>Prescripto</strong>, and <strong>LMS systems</strong>, <strong>On-Go Learn</strong> which are buiilt using the Mern stack .<strong>Writely</strong>, <strong>MyHomy</strong> are Built using Next.js. <strong>FastFoods</strong> which is a mobile app built with React Native.
             <br /><br />
             I’m enthusiastic about learning, problem-solving (50+ LeetCode challenges), and creating impactful digital experiences.
           </p>

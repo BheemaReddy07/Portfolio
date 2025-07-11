@@ -13,10 +13,10 @@ const skills = {
     'Redux Toolkit',
   ],
   Backend: ['Node.js', 'Express.js', 'JWT Auth', 'REST APIs'],
-  Databases: ['MongoDB', 'MySQL', 'Appwrite'],
-  Tools: ['Git & GitHub', 'Vercel', 'Render', 'Thunder Client', 'VS Code'],
-  APIs: ['Stripe', 'Razorpay', 'Google Maps API', 'ClipDrop API', 'OAuth'],
-  Languages: ['JavaScript', 'Java', 'C++', 'SQL'],
+  Databases: ['MongoDB', 'MySQL', 'Appwrite', 'Prisma' , 'Cloudinary' ],
+  Tools: ['Git & GitHub', 'Vercel', 'Render', 'Thunder Client', 'VS Code' , 'Postman' , 'Figma' , 'AOS' ],
+  APIs: ['Stripe', 'Google Maps API', 'ClipDrop API', 'OAuth', 'NodeMailer', 'Axios'],
+  Languages: ['JavaScript', 'Java', 'C++', 'SQL', 'C', 'Python'],
 };
 
 const TechnicalSkills = () => {
