@@ -46,7 +46,7 @@ const AboutMe = () => {
 
           {/* Resume Button */}
           <a
-            href="/Tatiparthi_Bheema_Subramanyeswar_Reddy.pdf"
+            href="/Tatiparthi_Bheema_Subramanyeswar_Reddy_Resume.pdf"
             download
             className="inline-flex items-center gap-3 bg-white text-black font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-black hover:text-white border border-white"
           >
