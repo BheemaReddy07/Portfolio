@@ -116,8 +116,8 @@ const ProjectCard = ({ title, description, photo, techStack, liveLink, gitLink }
     window.open(liveLink, "_blank", "noopener,noreferrer");
   };
   return (
-    <div onClick={handleClick} className="bg-black-200 border border-black-50 p-2   rounded-xl m-5 hover:scale-105 transition-all duration-200 hover:cursor-pointer">
-      <img src={photo} className="rounded-lg p-1 h-60" />
+    <div className="bg-black-200 border border-black-50 p-2   rounded-xl m-5 hover:scale-105 transition-all duration-200 ">
+      <img onClick={handleClick} src={photo} className="rounded-lg p-1 h-60 hover:cursor-pointer" />
       <div className="flex flex-col items-center px-2 p-2  mt-2">
         <h2 className="text-2xl font-bold">{title}</h2>
         <p className="text-md font-medium text-gray-300/60">{description}</p>
@@ -125,9 +125,9 @@ const ProjectCard = ({ title, description, photo, techStack, liveLink, gitLink }
       <div className="mx-3">
         <p className="italic font-extralight text-gray-400">{techStack}</p>
       </div>
-      <div className="mx-3 mt-5">
-        <a href={gitLink} target="_blank" rel="noopener noreferrer"> <GithubOutlined className="size-6" /></a>
-        <a href={liveLink} target="_blank" rel="noopener noreferrer"> <LinkOutlined className="size-6" /></a>
+      <div className="mx-3 mt-5 flex items-center gap-2">
+        <a href={gitLink} target="_blank" rel="noopener noreferrer"> <GithubOutlined className="size-6 hover:cursor-pointer" /></a>
+        <a href={liveLink} target="_blank" rel="noopener noreferrer"> <LinkOutlined className="size-6 hover:cursor-pointer" /></a>
       </div>
     </div>
   )
