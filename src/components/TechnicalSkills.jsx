@@ -16,7 +16,7 @@ const skills = {
   Databases: ['MongoDB', 'MySQL', 'Appwrite', 'Prisma' , 'Cloudinary' ],
   Tools: ['Git & GitHub', 'Vercel', 'Render', 'Thunder Client', 'VS Code' , 'Postman' , 'Figma' , 'AOS' ],
   APIs: ['Stripe', 'Google Maps API', 'ClipDrop API', 'OAuth', 'NodeMailer', 'Axios'],
-  Languages: ['JavaScript', 'Java', 'C++', 'SQL', 'C', 'Python'],
+  Languages: ['JavaScript', 'Java', 'C++', 'SQL', 'C', 'Python', 'TypeScript',],
 };
 
 const TechnicalSkills = () => {
@@ -28,7 +28,7 @@ const TechnicalSkills = () => {
   }, [])
 
   return (
-    <section className="py-20 px-5 md:px-20 text-white bg-black" id="skills">
+    <section  className="py-20 px-5 md:px-20 text-white bg-black" id="skills">
       <h2 data-aos="zoom-in" className="text-4xl font-bold mb-12 text-center">Technical Skills</h2>
 
       <div className="space-y-12">
@@ -43,7 +43,7 @@ const TechnicalSkills = () => {
                   data-aos="fade-right"
                   data-aos-delay={delay}
                   key={index}
-                  className="bg-black-50 border border-white/20 text-white-50 px-4 py-1 rounded-full text-sm md:hover:bg-white md:hover:text-black transition-colors duration-300 skill-tag"
+                  className="bg-black-50 border border-white/20 text-white-50 px-4 py-1 rounded-full text-sm md:hover:bg-white md:hover:text-black transition-colors duration-300 skill-tag hover:cursor-pointer"
                 >
                   {skill}
                 </span>

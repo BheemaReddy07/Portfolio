@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 const TechStack = () => {
 
   useGSAP(() => {
-    gsap.fromTo('.tech-card', { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 2.5, stagger: 0.2, ease: "power2.inOut", scrollTrigger: { trigger: "#techstack", start: "top 5%", } })
+    gsap.fromTo('.tech-card', { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 2.5, stagger: 0.2, ease: "power2.inOut", scrollTrigger: { trigger: "#techstack", start: "top 50%", } })
   })
 
 
@@ -15,9 +15,9 @@ const TechStack = () => {
     <div id="techstack" className="hidden md:flex  justify-center items-center px-5 md:px-10 md:mt-40 mt-20">
       <div className="w-full h-full md:px-10 px-5">
         <h2 className="text-center font-bold text-5xl">
-          My preferred Tech Stack
+          My  Tech Stack
         </h2>
-        <div className="tech-grid">
+        <div className="grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 xl:gap-16 md:gap-10 gap-5 mt-16">
           {techStackIcons.map((icon) => (
             <div
               key={icon.name}

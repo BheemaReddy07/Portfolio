@@ -1,5 +1,5 @@
 import React from "react";
-import { GithubOutlined } from "@ant-design/icons";
+import { GithubOutlined, LinkOutlined } from "@ant-design/icons";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -116,7 +116,7 @@ const ProjectCard = ({ title, description, photo, techStack, liveLink, gitLink }
     window.open(liveLink, "_blank", "noopener,noreferrer");
   };
   return (
-    <div onClick={handleClick} className="bg-black-200 border border-black-50 p-2   rounded-xl m-5 hover:scale-105 transition-all duration-200">
+    <div onClick={handleClick} className="bg-black-200 border border-black-50 p-2   rounded-xl m-5 hover:scale-105 transition-all duration-200 hover:cursor-pointer">
       <img src={photo} className="rounded-lg p-1 h-60" />
       <div className="flex flex-col items-center px-2 p-2  mt-2">
         <h2 className="text-2xl font-bold">{title}</h2>
@@ -127,6 +127,7 @@ const ProjectCard = ({ title, description, photo, techStack, liveLink, gitLink }
       </div>
       <div className="mx-3 mt-5">
         <a href={gitLink} target="_blank" rel="noopener noreferrer"> <GithubOutlined className="size-6" /></a>
+        <a href={liveLink} target="_blank" rel="noopener noreferrer"> <LinkOutlined className="size-6" /></a>
       </div>
     </div>
   )

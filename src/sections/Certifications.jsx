@@ -27,7 +27,7 @@ const Certifications = () => {
 
 
     return (
-        <section id="work" className="w-full mt-10 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center mb-10">
+        <section id="certifications" className="w-full mt-10 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center mb-10">
 
             <div className="w-full">
                 <div>
@@ -58,7 +58,7 @@ const CertificateCard = ({ title, photo, link }) => {
         window.open(link, "_blank", "noopener,noreferrer");
     };
     return (
-        <div onClick={handleClick} className="bg-black-200 border border-black-50 p-2   rounded-xl m-5 hover:scale-105 transition-all duration-200 max-h-[600px]">
+        <div onClick={handleClick} className="bg-black-200 border border-black-50 p-2   rounded-xl m-5 hover:scale-105 transition-all duration-200 max-h-[600px] hover:cursor-pointer">
             <img src={photo} className="rounded-lg p-1 h-60 w-100" />
             <div className="flex flex-col items-center px-2 p-2  mt-2">
                 <h2 className="text-2xl font-bold">{title}</h2>
