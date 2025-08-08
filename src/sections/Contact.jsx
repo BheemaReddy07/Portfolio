@@ -3,6 +3,7 @@ import ContactExperience from '../components/Models/Contact/ContactExperience';
 import emailjs from '@emailjs/browser';
 import 'aos/dist/aos.css';
 import AOS  from "aos";
+import SocialLinks from '../components/SocialLinks';
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -55,17 +56,17 @@ const Contact = () => {
   return (
     <section id="contact" className="flex-center section-padding" ref={formRef}>
       <div className="w-full h-full md:px-10 px-5">
-        <h2 data-aos="zoom-in" delay={500} className="text-center font-bold text-5xl">Get in Touch</h2>
-        <div className="grid-12-cols mt-16">
-          <div data-aos="zoom-in" delay={1000} className="xl:col-span-5">
-            <div className="flex-center card-border rounded-xl p-10">
+        <h2 data-aos="zoom-in" delay={500} className="text-center font-bold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB]">Get in Touch</h2>
+        <div className="grid-12-cols mt-16 items-stretch xl:items-end">
+          <div data-aos="zoom-in" delay={1000} className="xl:col-span-5 flex h-full">
+            <div className="flex-grow flex-center  bg-gradient-to-br from-white/10 to-white/5 rounded-2xl  py-8 backdrop-blur-xl p-10  transition-all duration-200  hover:shadow-[0_0_20px_5px_rgba(37,99,235,0.5)] border-2 border-transparent bg-clip-padding hover:border-[#06B6D4] hover:bg-gradient-to-br hover:from-[#2563EB]/20 hover:to-[#2563EB]/20">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
                 className="w-full flex flex-col gap-7"
               >
                 <div>
-                  <label htmlFor="name">Your name</label>
+                  <label htmlFor="name" className='text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB]'>Your name</label>
                   <input
                     type="text"
                     id="name"
@@ -78,7 +79,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email">Your Email</label>
+                  <label htmlFor="email" className='text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB]'>Your Email</label>
                   <input
                     type="email"
                     id="email"
@@ -91,7 +92,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message">Your Message</label>
+                  <label htmlFor="message" className='text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB]'>Your Message</label>
                   <textarea
                     id="message"
                     name="message"
@@ -104,12 +105,16 @@ const Contact = () => {
                 </div>
 
                 <button type="submit">
-                  <div className="cta-button group">
-                    <div className="bg-circle" />
-                    <p className="text">
+                  <div className="px-4 py-4 rounded-lg bg-gradient-to-r from-[#06B6D4] to-[#2563EB] flex justify-center items-center relative cursor-pointer overflow-hidden group transition-colors duration-300 group-hover:from-[#2563EB] group-hover:to-[#06B6D4]">
+                    <div className="absolute -right-10 origin-center top-1/2 -translate-y-1/2 
+                      w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
+                      rounded-full bg-gradient-to-r from-[#2563EB] to-[#06B6D4] transition-all duration-500" />
+                    <p className="uppercase md:text-lg text-white transition-all duration-500
+    group-hover:text-white group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5">
                       {loading ? "Sending..." : "Send Message"}
                     </p>
-                    <div className="arrow-wrapper">
+                    <div className="group-hover:bg-white size-10 rounded-full absolute right-10 top-1/2 
+    -translate-y-1/2 flex justify-center items-center overflow-hidden">
                       <img src="/images/arrow-down.svg" alt="arrow" />
                     </div>
                   </div>
@@ -117,9 +122,9 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div data-aos="zoom-in" delay={1000}   className="xl:col-span-7 min-h-96">
-            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
-              <ContactExperience />
+          <div data-aos="zoom-in" delay={1000}   className="xl:col-span-7 flex h-full">
+            <div className="flex-grow bg-white/5 backdrop-blur-xl rounded-3xl p-3 py-3 md:p-10 md:py-8 shadow-2xl transition-all duration-200  hover:shadow-[0_0_20px_5px_rgba(37,99,235,0.5)] border-2 border-transparent bg-clip-padding hover:border-[#06B6D4] hover:bg-gradient-to-br hover:from-[#2563EB]/20 hover:to-[#2563EB]/20 ">
+              <SocialLinks />
             </div>
           </div>
         </div>

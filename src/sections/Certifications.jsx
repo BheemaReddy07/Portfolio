@@ -31,7 +31,7 @@ const Certifications = () => {
 
             <div className="w-full">
                 <div>
-                    <h1 data-aos="zoom-in" className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-5 text-center">
+                    <h1 data-aos="zoom-in" className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-5 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB]">
                         My Certifications
                     </h1>
                 </div>
@@ -58,10 +58,10 @@ const CertificateCard = ({ title, photo, link }) => {
         window.open(link, "_blank", "noopener,noreferrer");
     };
     return (
-        <div onClick={handleClick} className="bg-black-200 border border-black-50 p-2   rounded-xl m-5 hover:scale-105 transition-all duration-200 max-h-[600px] hover:cursor-pointer">
+        <div onClick={handleClick} className="bg-black-200   p-2   rounded-xl m-5 hover:scale-105 transition-all duration-200 max-h-[600px] hover:cursor-pointer hover:shadow-[0_0_20px_5px_rgba(37,99,235,0.5)] border-2 border-transparent bg-clip-padding hover:border-[#06B6D4] hover:bg-gradient-to-br hover:from-[#2563EB]/20 hover:to-[#2563EB]/20 group">
             <img src={photo} className="rounded-lg p-1 h-60 w-100" />
             <div className="flex flex-col items-center px-2 p-2  mt-2">
-                <h2 className="text-2xl font-bold">{title}</h2>
+                <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB] transition-colors duration-200 group-hover:text-white">{title}</h2>
             </div>
         </div>
     )

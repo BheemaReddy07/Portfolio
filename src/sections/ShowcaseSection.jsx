@@ -77,10 +77,10 @@ const ShowcaseSection = () => {
 
       <div className="w-full">
         <div>
-          <h1 data-aos="zoom-in" className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-5 text-center">
+          <h1 data-aos="zoom-in" className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-5 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB]">
             My Work Showcase
           </h1>
-          <p  data-aos="fade-in"  className="hidden lg:block text-base md:text-lg lg:text-xl text-white-50 mb-10">
+          <p  data-aos="fade-in"  className="hidden lg:block text-base md:text-lg lg:text-xl text-white mb-10">
             Explore my projects that blend creativity and technology to solve
             real-world problems. Each project reflects my passion for innovation
             and my commitment to delivering user-friendly solutions.
@@ -116,14 +116,14 @@ const ProjectCard = ({ title, description, photo, techStack, liveLink, gitLink }
     window.open(liveLink, "_blank", "noopener,noreferrer");
   };
   return (
-    <div className="bg-black-200 border border-black-50 p-2   rounded-xl m-5 hover:scale-105 transition-all duration-200 ">
+    <div className="bg-black-200  p-2   rounded-xl m-5 hover:scale-105 transition-all duration-200  hover:shadow-[0_0_20px_5px_rgba(37,99,235,0.5)] border-2 border-transparent bg-clip-padding hover:border-[#06B6D4] hover:bg-gradient-to-br hover:from-[#2563EB]/20 hover:to-[#2563EB]/20 group">
       <img onClick={handleClick} src={photo} className="rounded-lg p-1 h-60 hover:cursor-pointer" />
       <div className="flex flex-col items-center px-2 p-2  mt-2">
-        <h2 className="text-2xl font-bold">{title}</h2>
-        <p className="text-md font-medium text-gray-300/60">{description}</p>
+        <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB]">{title}</h2>
+        <p className="text-md font-medium text-gray-300/60 transition-colors duration-200 group-hover:text-white">{description}</p>
       </div>
       <div className="mx-3">
-        <p className="italic font-extralight text-gray-400">{techStack}</p>
+        <p className="italic font-extralight text-gray-400 transition-colors duration-200 group-hover:text-[#06B6D4]">{techStack}</p>
       </div>
       <div className="mx-3 mt-5 flex items-center gap-2">
         <a href={gitLink} target="_blank" rel="noopener noreferrer"> <GithubOutlined className="size-6 hover:cursor-pointer" /></a>

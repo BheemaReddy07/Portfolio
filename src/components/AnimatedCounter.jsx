@@ -38,7 +38,7 @@ const AnimatedCounter = () => {
               <div className="text-white text-5xl font-bold mb-2">
                 {inView && <CountUp end={item.value} suffix={item.suffix} />}
               </div>
-              <div className="text-white-50 text-lg">{item.label}</div>
+              <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB] text-lg">{item.label}</div>
             </GlowWrapper>
           </div>
         })}

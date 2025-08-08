@@ -14,7 +14,7 @@ const TechStack = () => {
   return (
     <div id="techstack" className="hidden md:flex  justify-center items-center px-5 md:px-10 md:mt-40 mt-20">
       <div className="w-full h-full md:px-10 px-5">
-        <h2 className="text-center font-bold text-5xl">
+        <h2 className="text-center font-bold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB]">
           My  Tech Stack
         </h2>
         <div className="grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 xl:gap-16 md:gap-10 gap-5 mt-16">

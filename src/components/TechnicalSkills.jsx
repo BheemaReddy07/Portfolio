@@ -29,13 +29,13 @@ const TechnicalSkills = () => {
 
   return (
     <section  className="py-20 px-5 md:px-20 text-white bg-black" id="skills">
-      <h2 data-aos="zoom-in" className="text-4xl font-bold mb-12 text-center">Technical Skills</h2>
+      <h2 data-aos="zoom-in" className="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB]">Technical Skills</h2>
 
       <div className="space-y-12">
         {Object.entries(skills).map(([category, items]) => {
 
           return <div key={category}>
-            <h3 data-aos="fade-up" className="text-2xl font-semibold mb-4">{category}</h3>
+            <h3 data-aos="fade-up" className="text-2xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB] md:text-white">{category}</h3>
             <div className="flex flex-wrap gap-3">
               {items.map((skill, index) => {
                 const delay = index * 200;
@@ -43,7 +43,7 @@ const TechnicalSkills = () => {
                   data-aos="fade-right"
                   data-aos-delay={delay}
                   key={index}
-                  className="bg-black-50 border border-white/20 text-white-50 px-4 py-1 rounded-full text-sm md:hover:bg-white md:hover:text-black transition-colors duration-300 skill-tag hover:cursor-pointer"
+                  className="bg-black-50 border border-white/20 text-white-50 px-4 py-1 rounded-full text-sm md:hover:bg-gradient-to-r from-[#06B6D4] to-[#2563EB] md:hover:text-white transition-colors duration-500 skill-tag hover:cursor-pointer"
                 >
                   {skill}
                 </span>
