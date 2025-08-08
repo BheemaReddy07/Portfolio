@@ -13,7 +13,7 @@ const TypewriterEffect = ({ text }) => {
       } else {
         clearInterval(timer);
       }
-    }, 80);
+    }, 100);
     return () => clearInterval(timer);
   }, [text]);
 
@@ -94,7 +94,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
 
       
         <h1 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent select-text">
-          Bheema Subramanyeswar Reddy
+          Bheema Reddy
         </h1>
 
           <p className="text-lg sm:text-xl max-w-md mx-auto text-indigo-300">
