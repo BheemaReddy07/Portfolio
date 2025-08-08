@@ -41,13 +41,74 @@ const IconButton = ({ Icon }) => (
 );
 
 const WelcomeScreen = ({ onLoadingComplete }) => {
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      onLoadingComplete?.();
-    }, 4000); // Reduced to 2 seconds
-    return () => clearTimeout(timer);
-  }, [onLoadingComplete]);
+  // Performance & network detection
+  const hardwareConcurrency = navigator.hardwareConcurrency ?? 8;
+  const deviceMemory = navigator.deviceMemory ?? 8;
+  const connection = navigator.connection || {};
 
+  const isLowPerf = hardwareConcurrency < 4 || deviceMemory <= 2;
+
+  const isDownlinkSlow = typeof connection.downlink === 'number' && connection.downlink < 0.7;
+  const isEffectiveTypeSlow =
+    typeof connection.effectiveType === 'string' &&
+    (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' || connection.effectiveType === '3g');
+
+  const isSlowNet = isDownlinkSlow || isEffectiveTypeSlow;
+
+  const useStaticWelcome = isLowPerf || isSlowNet;
+
+
+ useEffect(() => {
+    if (useStaticWelcome) {
+      const timer = setTimeout(() => {
+        onLoadingComplete?.();
+      }, 3000); // 3 seconds for static welcome
+      return () => clearTimeout(timer);
+    }
+  }, [useStaticWelcome, onLoadingComplete]);
+
+  useEffect(() => {
+    if (!useStaticWelcome) {
+      const timer = setTimeout(() => {
+        onLoadingComplete?.();
+      }, 4000); // 4 seconds for animated welcome
+      return () => clearTimeout(timer);
+    }
+  }, [useStaticWelcome, onLoadingComplete]);
+  
+  if (useStaticWelcome) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-[#030014] text-white px-6 text-center space-y-6">
+     
+        <div className="flex justify-center gap-6">
+          {[Code, GraduationCap, Github].map((Icon, i) => (
+            <div
+              key={i}
+              className="p-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 opacity-70 animate-pulse"
+              style={{ animationDelay: `${i * 200}ms` }}
+            >
+              <Icon className="w-8 h-8 text-white" />
+            </div>
+          ))}
+        </div>
+
+      
+        <h1 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent select-text">
+          Bheema Subramanyeswar Reddy
+        </h1>
+
+          <p className="text-lg sm:text-xl max-w-md mx-auto text-indigo-300">
+          Full Stack Web Developer | MERN Stack | Creative Problem Solver
+        </p>
+ 
+        <div className="text-indigo-400 font-mono text-lg select-text">
+          <span className="animate-pulse">|</span>
+        </div>
+      </div>
+
+    );
+  }
+ 
   return (
     <div className="relative min-h-screen flex items-center justify-center px-4">
       <BackgroundEffect />
@@ -62,21 +123,41 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
         <motion.div className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold space-y-4">
             <div className="mb-2">
-              <span data-aos="fade-right" data-aos-delay="200" className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+              <span
+                data-aos="fade-right"
+                data-aos-delay="200"
+                className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
+              >
                 Welcome
               </span>{' '}
-              <span data-aos="fade-right" data-aos-delay="400" className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+              <span
+                data-aos="fade-right"
+                data-aos-delay="400"
+                className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
+              >
                 To
               </span>{' '}
-              <span data-aos="fade-right" data-aos-delay="600" className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+              <span
+                data-aos="fade-right"
+                data-aos-delay="600"
+                className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
+              >
                 My
               </span>
             </div>
             <div>
-              <span data-aos="fade-up" data-aos-delay="800" className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <span
+                data-aos="fade-up"
+                data-aos-delay="800"
+                className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+              >
                 Portfolio
               </span>{' '}
-              <span data-aos="fade-up" data-aos-delay="1000" className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <span
+                data-aos="fade-up"
+                data-aos-delay="1000"
+                className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+              >
                 Website
               </span>
             </div>
@@ -101,4 +182,4 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
   );
 };
 
-export default WelcomeScreen; 
+export default WelcomeScreen;
