@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Code, Github, GraduationCap, Globe } from 'lucide-react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const TypewriterEffect = ({ text }) => {
-  const [displayText, setDisplayText] = useState('');
+  const [displayText, setDisplayText] = React.useState('');
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -29,8 +27,7 @@ const TypewriterEffect = ({ text }) => {
 
 const BackgroundEffect = () => (
   <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 blur-3xl animate-pulse" />
-    <div className="absolute inset-0 bg-gradient-to-tr from-indigo-600/10 via-transparent to-purple-600/10 blur-2xl animate-float" />
+    <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 blur-xl animate-pulse" />
   </div>
 );
 
@@ -45,12 +42,9 @@ const IconButton = ({ Icon }) => (
 
 const WelcomeScreen = ({ onLoadingComplete }) => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false, mirror: false });
-
     const timer = setTimeout(() => {
-      onLoadingComplete?.(); // trigger fade out in App
-    }, 4500);
-
+      onLoadingComplete?.();
+    }, 4000); // Reduced to 2 seconds
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
@@ -58,7 +52,6 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
     <div className="relative min-h-screen flex items-center justify-center px-4">
       <BackgroundEffect />
       <div className="w-full max-w-4xl mx-auto">
-        {/* Icons */}
         <motion.div className="flex justify-center gap-4 md:gap-6 lg:gap-8 mb-6 md:mb-10">
           {[Code, GraduationCap, Github].map((Icon, index) => (
             <div key={index} data-aos="fade-down" data-aos-delay={index * 200}>
@@ -66,58 +59,30 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
             </div>
           ))}
         </motion.div>
-
-        {/* Text */}
         <motion.div className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold space-y-4">
             <div className="mb-2">
-              <span
-                data-aos="fade-right"
-                data-aos-delay="200"
-                className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
-              >
+              <span data-aos="fade-right" data-aos-delay="200" className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
                 Welcome
               </span>{' '}
-              <span
-                data-aos="fade-right"
-                data-aos-delay="400"
-                className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
-              >
+              <span data-aos="fade-right" data-aos-delay="400" className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
                 To
               </span>{' '}
-              <span
-                data-aos="fade-right"
-                data-aos-delay="600"
-                className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
-              >
+              <span data-aos="fade-right" data-aos-delay="600" className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
                 My
               </span>
             </div>
             <div>
-              <span
-                data-aos="fade-up"
-                data-aos-delay="800"
-                className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
-              >
+              <span data-aos="fade-up" data-aos-delay="800" className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 Portfolio
               </span>{' '}
-              <span
-                data-aos="fade-up"
-                data-aos-delay="1000"
-                className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
-              >
+              <span data-aos="fade-up" data-aos-delay="1000" className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 Website
               </span>
             </div>
           </h1>
         </motion.div>
-
-        {/* Name / Tagline */}
-        <motion.div
-          className="text-center"
-          data-aos="fade-up"
-          data-aos-delay="1200"
-        >
+        <motion.div className="text-center" data-aos="fade-up" data-aos-delay="1200">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full relative group hover:scale-105 transition-transform duration-300">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
             <div className="relative flex items-center gap-2 text-xl">
@@ -136,4 +101,4 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
   );
 };
 
-export default WelcomeScreen;
+export default WelcomeScreen; 
