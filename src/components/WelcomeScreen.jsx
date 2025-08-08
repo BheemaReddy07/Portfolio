@@ -94,7 +94,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
 
       
         <h1 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent select-text">
-          Bheema Reddy
+          Bheema Subramanyeswar Reddy
         </h1>
 
           <p className="text-lg sm:text-xl max-w-md mx-auto text-indigo-300">
@@ -169,7 +169,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
             <div className="relative flex items-center gap-2 text-xl">
               <Globe className="w-5 h-5 text-indigo-600" />
               <span className="text-white">
-                <TypewriterEffect text="Bheema Subramanyeswar Reddy" />
+                <TypewriterEffect text="Bheema Reddy" />
               </span>
             </div>
           </div>
