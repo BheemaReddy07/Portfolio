@@ -84,7 +84,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
           {[Code, GraduationCap, Github].map((Icon, i) => (
             <div
               key={i}
-              className="p-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 opacity-70 animate-pulse"
+              className="p-4 rounded-full bg-gradient-to-r from-[#06B6D4] to-[#2563EB]  opacity-70 animate-pulse"
               style={{ animationDelay: `${i * 200}ms` }}
             >
               <Icon className="w-8 h-8 text-white" />
@@ -93,15 +93,15 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
         </div>
 
       
-        <h1 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent select-text">
+        <h1 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-[#06B6D4] to-[#2563EB]  bg-clip-text text-transparent select-text">
           Bheema Subramanyeswar Reddy
         </h1>
 
-          <p className="text-lg sm:text-xl max-w-md mx-auto text-indigo-300">
+          <p className="text-lg sm:text-xl max-w-md mx-auto text-[#06B6D4]">
           Full Stack Web Developer | MERN Stack | Creative Problem Solver
         </p>
- 
-        <div className="text-indigo-400 font-mono text-lg select-text">
+
+        <div className="text-[#06B6D4] font-mono text-lg select-text">
           <span className="animate-pulse">|</span>
         </div>
       </div>
