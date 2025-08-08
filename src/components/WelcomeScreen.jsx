@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Code, Github, GraduationCap, Globe } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -15,7 +15,7 @@ const TypewriterEffect = ({ text }) => {
       } else {
         clearInterval(timer);
       }
-    }, 150);
+    }, 80);
     return () => clearInterval(timer);
   }, [text]);
 
@@ -44,136 +44,95 @@ const IconButton = ({ Icon }) => (
 );
 
 const WelcomeScreen = ({ onLoadingComplete }) => {
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     AOS.init({ duration: 1000, once: false, mirror: false });
 
     const timer = setTimeout(() => {
-      setIsLoading(false);
-      setTimeout(() => {
-        onLoadingComplete?.();
-      }, 800);
+      onLoadingComplete?.(); // trigger fade out in App
     }, 4500);
 
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
-  const containerVariants = {
-    exit: {
-      opacity: 0,
-      scale: 1.1,
-      filter: 'blur(10px)',
-      transition: {
-        duration: 0.8,
-        ease: 'easeInOut',
-        when: 'beforeChildren',
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const childVariants = {
-    exit: {
-      y: -20,
-      opacity: 0,
-      transition: {
-        duration: 0.4,
-        ease: 'easeInOut',
-      },
-    },
-  };
-
   return (
-    <AnimatePresence>
-      {isLoading && (
-        <motion.div
-          className="fixed inset-0 bg-[#030014] z-[999]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit="exit"
-          variants={containerVariants}
-        >
-          <BackgroundEffect />
-          <div className="relative min-h-screen flex items-center justify-center px-4">
-            <div className="w-full max-w-4xl mx-auto">
-              {/* Icons */}
-              <motion.div
-                className="flex justify-center gap-4 md:gap-6 lg:gap-8 mb-6 md:mb-10"
-                variants={childVariants}
+    <div className="relative min-h-screen flex items-center justify-center px-4">
+      <BackgroundEffect />
+      <div className="w-full max-w-4xl mx-auto">
+        {/* Icons */}
+        <motion.div className="flex justify-center gap-4 md:gap-6 lg:gap-8 mb-6 md:mb-10">
+          {[Code, GraduationCap, Github].map((Icon, index) => (
+            <div key={index} data-aos="fade-down" data-aos-delay={index * 200}>
+              <IconButton Icon={Icon} />
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Text */}
+        <motion.div className="text-center mb-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold space-y-4">
+            <div className="mb-2">
+              <span
+                data-aos="fade-right"
+                data-aos-delay="200"
+                className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
               >
-                {[Code, GraduationCap, Github].map((Icon, index) => (
-                  <div key={index} data-aos="fade-down" data-aos-delay={index * 200}>
-                    <IconButton Icon={Icon} />
-                  </div>
-                ))}
-              </motion.div>
+                Welcome
+              </span>{' '}
+              <span
+                data-aos="fade-right"
+                data-aos-delay="400"
+                className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
+              >
+                To
+              </span>{' '}
+              <span
+                data-aos="fade-right"
+                data-aos-delay="600"
+                className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
+              >
+                My
+              </span>
+            </div>
+            <div>
+              <span
+                data-aos="fade-up"
+                data-aos-delay="800"
+                className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+              >
+                Portfolio
+              </span>{' '}
+              <span
+                data-aos="fade-up"
+                data-aos-delay="1000"
+                className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+              >
+                Website
+              </span>
+            </div>
+          </h1>
+        </motion.div>
 
-              {/* Text */}
-              <motion.div className="text-center mb-8" variants={childVariants}>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold space-y-4">
-                  <div className="mb-2">
-                    <span
-                      data-aos="fade-right"
-                      data-aos-delay="200"
-                      className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
-                    >
-                      Welcome
-                    </span>{' '}
-                    <span
-                      data-aos="fade-right"
-                      data-aos-delay="400"
-                      className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
-                    >
-                      To
-                    </span>{' '}
-                    <span
-                      data-aos="fade-right"
-                      data-aos-delay="600"
-                      className="inline-block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
-                    >
-                      My
-                    </span>
-                  </div>
-                  <div>
-                    <span
-                      data-aos="fade-up"
-                      data-aos-delay="800"
-                      className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
-                    >
-                      Portfolio
-                    </span>{' '}
-                    <span
-                      data-aos="fade-up"
-                      data-aos-delay="1000"
-                      className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
-                    >
-                      Website
-                    </span>
-                  </div>
-                </h1>
-              </motion.div>
-
-              {/* Name / Tagline / Typewriter */}
-              <motion.div className="text-center" variants={childVariants} data-aos="fade-up" data-aos-delay="1200">
-                <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full relative group hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
-                  <div className="relative flex items-center gap-2 text-xl">
-                    <Globe className="w-5 h-5 text-indigo-600" />
-                    <span className="text-white">
-                      <TypewriterEffect text="Bheema Subramanyeswar Reddy" />
-                    </span>
-                  </div>
-                </div>
-                <p className="mt-4 text-white-50 text-sm md:text-base">
-                  Full Stack Web Developer | MERN Stack | Creative Problem Solver
-                </p>
-              </motion.div>
+        {/* Name / Tagline */}
+        <motion.div
+          className="text-center"
+          data-aos="fade-up"
+          data-aos-delay="1200"
+        >
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full relative group hover:scale-105 transition-transform duration-300">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
+            <div className="relative flex items-center gap-2 text-xl">
+              <Globe className="w-5 h-5 text-indigo-600" />
+              <span className="text-white">
+                <TypewriterEffect text="Bheema Subramanyeswar Reddy" />
+              </span>
             </div>
           </div>
+          <p className="mt-4 text-white-50 text-sm md:text-base">
+            Full Stack Web Developer | MERN Stack | Creative Problem Solver
+          </p>
         </motion.div>
-      )}
-    </AnimatePresence>
+      </div>
+    </div>
   );
 };
 
