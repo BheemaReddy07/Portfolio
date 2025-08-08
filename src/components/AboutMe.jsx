@@ -3,7 +3,7 @@ import { FaEnvelope, FaPhoneAlt, FaDownload } from 'react-icons/fa';
 import { useEffect } from "react";
 import 'aos/dist/aos.css';
 import AOS from "aos";
-
+import { FileCode } from 'lucide-react';
 
 const AboutMe = () => {
   useEffect(() => {
@@ -19,7 +19,7 @@ const AboutMe = () => {
 
         <img
           data-aos="fade-right"
-          src="/images/BSR2.jpg"
+          src="/images/BSR1.jpg"
           alt="Tatiparthi Bheema Subramanyeswar Reddy"
           className="flex rounded-full w-full md:w-[420px] mx-auto 
   p-1 bg-gradient-to-r from-[#06B6D4] to-[#2563EB]
@@ -53,10 +53,11 @@ const AboutMe = () => {
           {/* Resume Button */}
           <a
             href="/Tatiparthi_Bheema_Subramanyeswar_Reddy_Resume.pdf"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3  font-semibold px-6 py-3 rounded-lg  bg-gradient-to-r from-[#06B6D4] to-[#2563EB] text-black hover:from-[#2563EB] hover:to-[#06B6D4] hover:transition-colors duration-300"
           >
-            <span className='text-white transition-colors duration-300 inline-flex items-center gap-2'>  <FaDownload />Download Resume</span>
+            <span className='text-white transition-colors duration-300 inline-flex items-center gap-2'> <FileCode />View Resume</span>
           </a>
         </div>
       </div>

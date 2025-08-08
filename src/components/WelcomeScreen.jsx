@@ -160,7 +160,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
                   <div className="relative flex items-center gap-2 text-xl">
                     <Globe className="w-5 h-5 text-indigo-600" />
-                    <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                    <span className="text-white">
                       <TypewriterEffect text="Bheema Subramanyeswar Reddy" />
                     </span>
                   </div>

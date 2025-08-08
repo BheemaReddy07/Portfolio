@@ -33,8 +33,8 @@ const Navbar = () => {
           </ul>
         </nav>
         <a href="#contact" className="flex group">
-          <div className="px-5 py-2 rounded-lg    bg-gradient-to-r from-[#06B6D4] to-[#2563EB] text-black group-hover:from-[#2563EB] group-hover:to-[#06B6D4] transition-colors duration-300">
-            <span className="text-white transition-colors duration-300">Contact me</span>
+          <div className="px-5 py-2 rounded-lg    bg-gradient-to-r from-[#2563EB] to-[#06B6D4] text-black group-hover:from-[#06B6D4] group-hover:to-[#2563EB] transition-colors duration-300">
+            <span className="text-white transition-colors duration-300 font-bold">Contact me</span>
           </div>
         </a>
       </div>
