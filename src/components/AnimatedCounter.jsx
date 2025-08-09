@@ -33,7 +33,7 @@ const AnimatedCounter = () => {
         {counterItems.map(( item, index ) => {
           const delay = index * 200;
 
-          return <div key={item} data-aos='fade-left' data-aos-delay={delay}>
+          return <div key={index} data-aos='fade-left' data-aos-delay={delay}>
             <GlowWrapper className="p-10">
               <div className="text-white text-5xl font-bold mb-2">
                 {inView && <CountUp end={item.value} suffix={item.suffix} />}

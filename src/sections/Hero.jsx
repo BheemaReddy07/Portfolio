@@ -29,7 +29,7 @@ const Hero = () => {
       </div>
 
       {/* Main container */}
-      <div className="relative z-10 xl:mt-20 mt-32 flex flex-col md:flex-row xl:items-center items-start justify-between md:h-dvh h-[80vh] md:px-20 px-5">
+      <div className="relative z-10 xl:mt-20 mt-32 flex flex-col gap-5 md:flex-row xl:items-center items-start justify-between md:h-dvh h-[80vh] md:px-20 px-5">
         {/* LEFT: Hero content */}
         <header className="flex flex-col justify-center flex-1 pr-5">
           <div className="flex flex-col gap-7">
