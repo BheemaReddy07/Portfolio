@@ -48,8 +48,9 @@ const App = () => {
       >
         <Navbar />
         <Hero />
+        <AboutMe />
         <Suspense fallback={<div className="text-center text-white">Loading...</div>}>
-          <AboutMe />
+          
           <AnimatedCounter />
           <ShowcaseSection />
           <Certifications />
