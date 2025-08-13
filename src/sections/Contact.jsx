@@ -54,7 +54,7 @@ const Contact = () => {
 
 
   return (
-    <section id="contact" className="flex-center section-padding" ref={formRef}>
+    <section id="contact" className="flex-center section-padding" >
       <div className="w-full h-full md:px-10 px-5">
         <h2 data-aos="zoom-in" delay={500} className="text-center font-bold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#2563EB]">Get in Touch</h2>
         <div className="grid-12-cols mt-16 items-stretch xl:items-end">
