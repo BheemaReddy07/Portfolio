@@ -1,12 +1,27 @@
-# React + Vite
+# 💻 Bheema Reddy — MERN Stack Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website showcasing my skills, projects, and experience as a **MERN stack developer**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 👋 **About Me** — introduction and career journey  
+- 🛠 **Tech Stack** — skills and tools I work with  
+- 📂 **Projects Showcase** — live demos & GitHub links  
+- 📜 **Resume Download** — quick access to my CV  
+- 📱 **Responsive Design** — works on all devices  
+- ⚡ **Smooth Animations** — modern UI transitions  
+- 🌐 **Contact Section** — easy ways to reach me  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📬 Contact
+
+- **Name:** Bheema Subramanyeswar Reddy Tatiparthi  
+- **Email:** bheemareddy2910@gmail.com  
+- **Portfolio:** [https://bheemareddy-portfolio.vercel.app](#)  
+- **LinkedIn:** [https://www.linkedin.com/in/bheema-subramanyeswar-reddy-tatiparthi-541104344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app](#)  
+- **GitHub:** [https://github.com/BheemaReddy07](#)  
+
+---
