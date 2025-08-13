@@ -20,8 +20,8 @@ A modern, responsive personal portfolio website showcasing my skills, projects, 
 
 - **Name:** Bheema Subramanyeswar Reddy Tatiparthi  
 - **Email:** bheemareddy2910@gmail.com  
-- **Portfolio:** [https://bheemareddy-portfolio.vercel.app](#)  
-- **LinkedIn:** [https://www.linkedin.com/in/bheema-subramanyeswar-reddy-tatiparthi-541104344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app](#)  
-- **GitHub:** [https://github.com/BheemaReddy07](#)  
+- **Portfolio:** https://bheemareddy-portfolio.vercel.app  
+- **LinkedIn:** https://www.linkedin.com/in/bheema-subramanyeswar-reddy-tatiparthi-541104344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app  
+- **GitHub:** https://github.com/BheemaReddy07  
 
 ---
