@@ -91,8 +91,8 @@ const ShowcaseSection = () => {
           {
             projectsInfo.map((project, index) => {
               const delay = index * 200;
-              return <div data-aos='fade-up' data-aos-delay={delay} key={index}>
-                <ProjectCard
+              return <div data-aos='fade-up' data-aos-delay={delay} key={index} className="flex">
+                <ProjectCard className="flex flex-col w-full h-full justify-center"
                   title={project.title}
                   description={project.description}
                   photo={project.photo}
